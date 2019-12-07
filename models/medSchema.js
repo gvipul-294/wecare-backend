@@ -5,36 +5,31 @@ const environment = process.env.NODE_ENV;
 const Schema = mongoose.Schema;
 
 // booking schema
-const bookingSchema = new Schema({
+const medSchema = new Schema({
     id: {
         type: 'String',
         required: true,
     },
-    date: {
+    color: {
         type: 'String',
         required: true,
         trim: true,
     },
-    duration: {
+    expiryDate: {
+        type: 'String',
+        required: true,
+        trim: true,
+    },
+    quantity: {
         type: 'Number',
         required: true,
-        trim: true,
-    },
-    startTime: {
-        type: 'String',
-        required: true,
         trim: true
     },
-    endTime: {
-        type: 'String',
-        required: true,
-        trim: true
-    },
-    createdAt: {
+    time: {
         type: 'String',
         required: true,
         trim: true
     },
 });
 
-module.exports = mongoose.model('Booking', bookingSchema);
+module.exports = mongoose.model('medSchema', medSchema);
